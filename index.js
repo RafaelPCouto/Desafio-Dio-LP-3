@@ -1,4 +1,4 @@
-class hero {
+class Hero {
     constructor(heroName, heroAge, heroType) {
         this.heroName = heroName.toUpperCase();
         this.heroAge = heroAge;
@@ -21,53 +21,53 @@ class hero {
 
     }
 
-    // Métdo de ataque customizado pelo tipo do herói
+    // Método para ataque customizado
 
     attack() {
 
-        let weapon = this.#getWeapon();
-        console.log(`${this.heroName}, the ${this.heroType}, has just attacked with ${weapon}!`);
+        const weapon = this.#getWeapon();
+        console.log(`${this.heroName}, the ${this.heroType}, has just attacked with ${weapon}!\n`);
 
     };
 
-    // Método para saudação - customizada pelo nome do herói
+    // Método para saudação customizada
 
     greetings() {
 
-        console.log(`${this.heroName} says: Greetings, my friend! My name is ${this.heroName}. I'm a ${this.heroType} and I was born ${this.heroAge} years ago!`);
+        console.log(`${this.heroName} says: Greetings, my friend! My name is ${this.heroName}. I'm a ${this.heroType} and I was born ${this.heroAge} years ago!\n`);
 
     };
 
-    // Método para ameaça - Customizada pelo tipo do herói
+    // Método para ameaça customizada
 
     threat() {
-        let weapon = this.#getWeapon();
-        console.log(`${this.heroName} says: Don't mess with me, or u'll face my ${weapon}!`);
+        const weapon = this.#getWeapon();
+        console.log(`${this.heroName} says: Don't mess with me, or u'll face my ${weapon}!\n`);
 
     }
 }
 
 // Heróis criados para testes
 
-let hero1 = new hero("Gandalf", 2000, "mage");
+const hero1 = new Hero("Gandalf", 2000, "mage");
 
 hero1.greetings();
 hero1.threat();
 hero1.attack();
 
-let hero2 = new hero("Aragorn", 87, "warrior");
+const hero2 = new Hero("Aragorn", 87, "warrior");
 
 hero2.greetings();
 hero2.threat();
 hero2.attack();
 
-let hero3 = new hero("Bruce Lee", 21, "monk");
+const hero3 = new Hero("Bruce Lee", 21, "monk");
 
 hero3.greetings();
 hero3.threat();
 hero3.attack();
 
-let hero4 = new hero("Hatake Kakashi", 26, "ninja");
+const hero4 = new Hero("Hatake Kakashi", 26, "ninja");
 
 hero4.greetings();
 hero4.threat();
